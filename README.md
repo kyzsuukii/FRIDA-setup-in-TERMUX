@@ -22,7 +22,7 @@ This guide will help you install and set up Frida in Termux without any errors.
 ```
 9. Open another session in Termux and run the following command to start Frida with your desired package name and script:
 ```
-frida -H 127.0.0.1:1234 -no-pause -f pkg.name -l /data/local/tmp/script.js
+frida -H 127.0.0.1:1234 -no-pause -f pkg.name -l script.js
 ```
 Note: The script should be present in `/data/local/tmp` folder or you should define the path where it is stored.
 
