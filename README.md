@@ -16,7 +16,7 @@ This guide will help you install and set up Frida-Server in Termux without any e
 ```
 - Update dependencies in Termux
 ```
- pkg update
+pkg update
 pkg upgrade
 ```
 - Install python by using this command
