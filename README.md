@@ -1,5 +1,6 @@
 # Frida-Server Setup
-Setup Frida-core devkit in order to install frida in termux without any errors!
+# Setup Frida-core devkit in order to install frida in termux without any errors!
+
 Follow the steps below to install and use Frida in Termux without any errors:
 
 Download the Frida-core devkit from here.
