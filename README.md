@@ -37,7 +37,7 @@ pkg install tsu
 4. Install frida-tools using python: `pip install frida-tools`
 5. Download Frida-server from [here](https://github.com/frida/frida/releases/download/16.0.11/frida-server-16.0.11-android-arm64.xz).
 6. Extract the contents of the downloaded file and rename it to `frida-server`.
-7. Move the `frida-server` file to `/data/local/tmp/` folder and give it 777 permissions.
+7. Move the `frida-server` file to `/data/local/tmp/` folder and give it 777 permissions or in termux change directory where `frida-server` by using `cd /data/local/tmp/` cmd then use 'chmod 777 *` cmd to grant rwx permissions for frida-server.
 8. Open termux then change directory to /data/local/tmp/ then use tsu like this
 ```
 cd /data/local/tmp/
