@@ -1,10 +1,9 @@
 # Setting up Frida-Server in Termux
 
 ## Introduction
-This guide will help you install and set up Frida in Termux without any errors.
+This guide will help you install and set up Frida-Server in Termux without any errors.
 
 ## Requirements
-- An Android device running on ARM64 architecture
 - A rooted Android device
 - Termux installed on your Android device
 
