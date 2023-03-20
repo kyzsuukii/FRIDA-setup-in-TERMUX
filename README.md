@@ -23,6 +23,6 @@ This guide will help you install and set up Frida-Server in Termux without any e
 ```
 frida -H 127.0.0.1:1234 -no-pause -f pkg.name -l script.js
 ```
-Note: The script should be present in `/data/local/tmp` folder or you should define the path where it is stored.
+Note: This tutorial is only for arm64 devices.
 
 Congratulations! You have successfully set up Frida in Termux on your Android device.
