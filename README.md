@@ -1,14 +1,31 @@
-# Frida-Server Setup
-# Setup Frida-core devkit in order to install frida in termux without any errors!
+# Setting up Frida in Termux
 
-Follow the steps below to install and use Frida in Termux without any errors:
+## Introduction
+This guide will help you install and set up Frida in Termux without any errors.
 
-Download the Frida-core devkit from here.
-Extract the devkit to any directory you prefer. For example, /storage/emulated/0/devkit.
-In Termux, run the command export FRIDA_CORE_DEVKIT=/path/to/devkit where /path/to/devkit is the path to the directory where you extracted the devkit.
-Install frida-tools using the command pip install frida-tools.
-Download the Frida-server from here and extract it.
-Rename the extracted file to frida-server and move it to /data/local/tmp/.
-Give the server executable permissions by running the command chmod 777 /data/local/tmp/frida-server.
-Start the Frida-server by opening a new session in Termux and running either ./frida-server -l 127.0.0.1:1234 or ./frida-server -l localhost:1234.
-In another Termux session, use the command frida -H 127.0.0.1:1234 -no-pause -f pkg.name -l /path/to/script.js or frida -H localhost:1234 -no-pause -f pkg.name -l /path/to/script.js to run the desired script. Note that the script should be present in /data/local/tmp or you should define the path to where it is stored.
+## Requirements
+- An Android device running on ARM64 architecture
+- A rooted Android device
+- Termux installed on your Android device
+
+## Installation Steps
+1. Download the Frida-core devkit from [here](https://github.com/frida/frida/releases/download/16.0.11/frida-core-devkit-16.0.11-android-arm64.tar.xz).
+2. Extract the contents of the downloaded file to any path you desire. For instance, let's extract it to `/storage/emulated/0/devkit`.
+3. Open Termux and paste the following command: `export FRIDA_CORE_DEVKIT=/storage/emulated/0/devkit`
+4. Install frida-tools using python: `pip install frida-tools`
+5. Download Frida-server from [here](https://github.com/frida/frida/releases/download/16.0.11/frida-server-16.0.11-android-arm64.xz).
+6. Extract the contents of the downloaded file and rename it to `frida-server`.
+7. Move the `frida-server` file to `/data/local/tmp/` folder and give it 777 permissions.
+8. Start the Frida-server by opening a new session in Termux and running either of these commands:
+```
+./frida-server -l 127.0.0.1:1234
+./frida-server -l localhost:1234
+```
+9. Open another session in Termux and run the following command to start Frida with your desired package name and script:
+```
+frida -H 127.0.0.1:1234 -no-pause -f pkg.name -l /data/local/tmp/script.js 
+frida -H localhost:1234 -no-pause -f pkg.name -l /data/local/tmp/script.js
+```
+Note: The script should be present in `/data/local/tmp` folder or you should define the path where it is stored.
+
+Congratulations! You have successfully set up Frida in Termux on your Android device.
