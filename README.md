@@ -23,7 +23,7 @@ pkg upgrade
 ```
 pkg install python
 ```
--Install sudo by by using this command
+- Install sudo by by using this command
 ```
 pkg install tsu
 ```
